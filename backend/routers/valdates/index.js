@@ -10,4 +10,9 @@ const joiValdatesPatch = joi.object({
     isCompleted:joi.boolean().optional()
 }).min(1);
 
-module.exports = {joiValdates,joiValdatesPatch};
+const joiValdatesUsercreate = joi.object({
+    userName:joi.string().required().trim(),
+    password:joi.string().required()
+});
+
+module.exports = {joiValdates,joiValdatesPatch,joiValdatesUsercreate};
